@@ -1,0 +1,211 @@
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  @font-face {
+    font-family: "Ruhl";
+    src: url("/fonts/FrankRuhlLibre-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Ruhl Medium";
+    src: url("/fonts/FrankRuhlLibre-Medium.ttf");
+  }
+  @font-face {
+    font-family: "Vibes";
+    src: url("/fonts/GreatVibes-Regular.ttf");
+  }
+  
+  html {
+    font-size: 62.5%;
+    --header1: calc(2rem + 1vw);
+    --header2: calc(3.5rem + 1vw);
+    --header3: calc(3rem + 1vw);
+    --header4: calc(2.4rem + 1vw);
+    --text: calc(1.5rem + 1vw);
+    --big: calc(6rem + 1vw);
+    --special-color: #906272;
+    --background-color: rgb(3, 119, 252);
+    --gray-text: #525252;
+    scroll-behavior: smooth;
+  }
+  
+  h1 {
+    font-size: var(--header1);
+  }
+  li,
+  /* button, */
+  label,
+  input,
+  a,
+  p {
+    font-size: var(--text);
+  }
+  h2 {
+    font-size: var(--header2);
+  }
+  h3 {
+    font-size: var(--header3);
+  }
+  h4,
+  h5 {
+    font-size: var(--header4);
+  }
+  
+  ul {
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body {
+    font-family: "Ruhl", sans-serif;
+    animation: opening 1s ease-in-out forwards;
+  }
+  h1 {
+    font-family: "Vibes", sans-serif;
+  }
+  
+  /* Nav Section */
+  .main-head {
+    background: white;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+    position: relative;
+    position: sticky;
+    top: 0px;
+  }
+  
+  nav {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    min-height: 10vh;
+    padding: 2rem 0rem;
+  }
+  #logo {
+    flex: 1 1 20rem;
+  }
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    flex: 1 1 20rem;
+  }
+
+/* main */
+
+  main{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 2rem;
+  }
+
+  h1{
+      display: flex;
+      justify-content: center;
+  }
+
+  p{
+      margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+  /* Section */
+
+  section{
+      display: flex;
+      flex-direction: column;
+  }
+
+  button{
+      padding: 2rem;
+      margin: 5px 25%;
+      font-weight: bold;
+  }
+
+  
+  @media screen and (max-width: 842px) {
+    /* BURGER THING */
+    .burger {
+      position: relative;
+      display: block;
+      cursor: pointer;
+    }
+    .burger span {
+      padding: 0.2rem 2rem;
+      background: var(--gray-text);
+      margin: 0.5rem 0rem;
+      display: block;
+      transition: all 0.5s ease;
+    }
+    .nav-links a {
+      color: white;
+      font-size: var(--header3);
+      text-decoration: underline;
+    }
+    .nav-links {
+      background: var(--background-color);
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 100%;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 1s ease;
+    }
+  
+    .nav-open {
+      transform: translateX(-100%);
+    }
+  
+    .toggle .line1 {
+      transform: rotateZ(45deg) translateY(300%);
+      background: white;
+    }
+    .toggle .line2 {
+      opacity: 0;
+    }
+    .toggle .line3 {
+      transform: rotateZ(-45deg) translateY(-300%);
+      background: white;
+    }
+    .scientists{
+      display: grid;
+      grid-template-columns: 1fr!important;
+    }
+  
+  }
+
+  /*Scientists grid*/
+
+  .scientists{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .scientist{
+    margin: 2rem;
+  }
+
+fieldset{
+  display: flex;
+  border-radius: 15px;
+}
+
+img{
+  border-radius: 15px;
+}
